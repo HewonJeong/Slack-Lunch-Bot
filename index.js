@@ -10,7 +10,6 @@ const db = levelup('./database', {valueEncoding: 'json'});
 const params = {icon_emoji: ':rice:'};
 const channels = {};
 const users = {};
-//const places = [];
 
 const STATES = {
     NONE: 0,
@@ -34,7 +33,6 @@ bot.on('start', function() {
 });
 
 bot.on('message', data => {
-    //console.log(data);
     if (data.type != 'message') return;
     if (isBot(data)) return;
     const receiver = users[data.user];
@@ -128,7 +126,7 @@ function isBot(data) {
 }
 
 function isDm(data) {
-    return data.channel === process.env.SLACK_BOT_DM_CHANNEL;
+    return !getName(channels, data.channel);
 }
 
 function getName(array, id) {
