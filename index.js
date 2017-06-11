@@ -96,7 +96,7 @@ bot.on('message', data => {
                     }
                     db.put(key, place);
                     receiver.state = STATES.NONE;
-                    const ChannelName = getName(channels, process.env.SLACK_BOT_PUBLIC_CHANNEL)
+                    const ChannelName = process.env.SLACK_BOT_PUBLIC_CHANNEL;
                     bot.postTo(ChannelName, `새 식당이 등록됐어요!:tada:`, attachments.place(place));
                     bot.postTo(dest, `감사합니다. *_${title}_* 식당이 등록됐어요!:confetti_ball:`, attachments.place(place));
                 });
@@ -110,7 +110,7 @@ bot.on('message', data => {
                         });
                     } else {
                         db.del(key);
-                        const ChannelName = getName(channels, process.env.SLACK_BOT_PUBLIC_CHANNEL)
+                        const ChannelName = process.env.SLACK_BOT_PUBLIC_CHANNEL;
                         bot.postTo(ChannelName, '', attachments.message(`${title} 식당이 삭제됐어요.`));
                         bot.postTo(dest, '', attachments.message(`${title} 식당을 삭제했어요.`));
                     }
