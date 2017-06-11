@@ -1,0 +1,20 @@
+{
+  "name": "Slack-Lunch-Bot",
+  "version": "0.1.0",
+  "description": "slack lunch bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "slack",
+    "bot"
+  ],
+  "author": "Hewon Jeong <hewon.jng@gmail.com> (http://github.com/hewonjeong)",
+  "license": "MIT",
+  "dependencies": {
+    "level": "^1.7.0",
+    "moment": "^2.11.2",
+    "slackbots": "^0.5.1"
+  }
+}
