@@ -111,8 +111,8 @@ bot.on('message', data => {
                     } else {
                         db.del(key);
                         const ChannelName = process.env.SLACK_BOT_PUBLIC_CHANNEL;
-                        bot.postTo(ChannelName, '', attachments.message(`${title} 식당이 삭제됐어요.`));
-                        bot.postTo(dest, '', attachments.message(`${title} 식당을 삭제했어요.`));
+                        bot.postTo(ChannelName, '', attachments.message(`*_${title}_* 식당이 삭제됐어요.`));
+                        bot.postTo(dest, '', attachments.message(`*_${title}_* 식당을 삭제했어요.`));
                     }
                 });
                 receiver.state = STATES.NONE;
