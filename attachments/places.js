@@ -1,11 +1,11 @@
 module.exports = function(places) {
   return {
     icon_emoji: ':rice:',
-    attachments: places.map(function(place) {
-      return {
+    attachments: [{
         color: 'good',
-        title: place.title
-      };
-    })
+        fields: places.map(function(place) {
+            return {title: place.title, short: true}
+        })
+    }]
   };
 };

@@ -12,11 +12,11 @@ module.exports = {
       short: true
     }, {
       title: '목록',
-      value: '등록된 식당 목록을 보여드러요.',
+      value: '등록된 식당 목록을 보여드려요.',
       short: true
     }, {
         title: '삭제',
-        value: '등록된 식당을 삭제해드러요.',
+        value: '등록된 식당을 삭제해드려요.',
         short: true
     }, {
       title: '랜덤',
